@@ -1,5 +1,15 @@
 <html>
+		
+	{% for post in posts %}	
+		
+		<div>
+			<p>punlished: {{ post.published_date }}</p>
+			<h1><a href = "">{{ post.title }}</a></h1>
+			<p>{{ post.text|linebreaks }}</p>
+		</div>
 
-	<p>Hi there!</p>
+
+	{% endfor %}	
+
 
 </html>
