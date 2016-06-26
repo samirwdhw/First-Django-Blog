@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+	
+	<h3>Title: {{ post.title}}</h3>
+	<h3>Author: {{ post.author }}</h3>
+	<h3>Text: </h3>
+	<p>{{ post.text|linebreaksbr }}</p>
+
+	<a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class = "glyphicon glyphicon-pencil"></span></a>
+
+{% endblock %}
